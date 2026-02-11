@@ -1,0 +1,6 @@
+defaults:
+  - ../federated_5clients
+
+model:
+  enable_depth_mixer: false
+  enable_depth_pos: false

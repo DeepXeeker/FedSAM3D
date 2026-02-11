@@ -1,0 +1,5 @@
+defaults:
+  - ../federated_5clients
+
+distill:
+  gamma: 0.0

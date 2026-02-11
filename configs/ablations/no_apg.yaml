@@ -1,0 +1,5 @@
+defaults:
+  - ../federated_5clients
+
+model:
+  use_apg: false

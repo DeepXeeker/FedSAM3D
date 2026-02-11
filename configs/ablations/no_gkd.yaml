@@ -1,0 +1,5 @@
+defaults:
+  - ../federated_5clients
+
+distill:
+  beta: 0.0
