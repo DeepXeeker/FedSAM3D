@@ -1,0 +1,23 @@
+# Core
+torch>=2.2
+torchvision>=0.17
+numpy>=1.24
+scipy>=1.10
+tqdm>=4.66
+PyYAML>=6.0
+omegaconf>=2.3
+hydra-core>=1.3
+einops>=0.7
+
+# Medical imaging
+monai>=1.3
+nibabel>=5.1
+SimpleITK>=2.3
+scikit-image>=0.22
+
+# Logging
+tensorboard>=2.15
+
+# Optional (SAM backbone)
+segment-anything>=1.0
+opencv-python>=4.8

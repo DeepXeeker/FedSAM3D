@@ -1,0 +1,16 @@
+name: fedsam3d
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip=24.0
+  - pytorch=2.2.*
+  - torchvision=0.17.*
+  - pytorch-cuda=12.1
+  - cudnn=8.9
+  - numpy>=1.24
+  - scipy>=1.10
+  - pip:
+      - -r requirements.txt

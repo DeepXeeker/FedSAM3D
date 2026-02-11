@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fedsam3d"
+version = "0.1.0"
+description = "FedSAM3D: Auto-Prompted Volumetric Multi-Organ Segmentation with Coupled Distillation for Federated Learning under Label Fragmentation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "FedSAM3D Reproduction"}]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["fedsam3d*"]
