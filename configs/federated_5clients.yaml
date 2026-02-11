@@ -1,0 +1,19 @@
+defaults:
+  - default
+
+clients:
+  spleen:
+    dataset: "msd_spleen"
+    data_root: "datasets/msd_spleen"
+  liver:
+    dataset: "msd_liver"
+    data_root: "datasets/msd_liver"
+  pancreas:
+    dataset: "msd_pancreas"
+    data_root: "datasets/msd_pancreas"
+  kidney:
+    dataset: "kits19_kidney"
+    data_root: "datasets/kits19_kidney"
+  btcv:
+    dataset: "btcv_multi"
+    data_root: "datasets/btcv_multi"

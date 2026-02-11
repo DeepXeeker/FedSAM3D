@@ -1,0 +1,51 @@
+seed: 42
+device: "cuda"
+
+paths:
+  runs_dir: "runs"
+  sam_checkpoint: ""  # set this to official SAM checkpoint path (ViT-B/L/H)
+
+data:
+  target_spacing: [1.5, 1.5, 1.5]
+  patch_size: [128, 128, 128]
+  num_workers: 4
+  batch_size: 1
+  intensity:
+    a_min: -175
+    a_max: 250
+    b_min: 0.0
+    b_max: 1.0
+
+model:
+  sam_variant: "vit_b"  # vit_b / vit_l / vit_h
+  embed_dim: 256        # decoder embed dim
+  apg_dim: 256          # query dim
+  num_classes: 13
+  adapter_rank: 16
+  adapter_layers: 6
+  depth_mixer_kernel: 3
+  freeze_sam: true
+  decoder:
+    num_layers: 3
+    num_heads: 8
+    mlp_ratio: 4.0
+    dropout: 0.0
+
+train:
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  max_rounds: 200
+  local_steps: 200
+  amp: true
+  grad_clip: 1.0
+
+distill:
+  beta: 0.5
+  gamma: 0.5
+  tau_gkd: 0.7
+  tau_pkd: 0.7
+  mk: 4                  # missing-class subsampling per round
+
+federated:
+  participation: 1.0
+  aggregation: "supervision_mass"  # uniform / fedavg / label_coverage / supervision_mass
