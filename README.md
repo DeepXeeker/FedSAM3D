@@ -1,4 +1,4 @@
-# FedSAM3D (Option B: paper-aligned reproduction)
+# FedSAM3D
 
 FedSAM3D is a cross-silo federated framework for **volumetric multi-organ segmentation** under **label fragmentation**.
 
